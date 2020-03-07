@@ -23,19 +23,24 @@ public class KugeciHttp {
 		List<String> lines = FileUtil.readUtf8Lines(path);
 		int size = lines.size();
 		
+		// 倒序检索
 		for (int i = size - 1; i >= 0; i--) {
 			String s = lines.get(i);
 			if (StrUtil.isNotBlank(s) && s.contains("page=")) {
 				String between = StrUtil.subBetween(s, "page=", "==");
 				if (StrUtil.isNotBlank(between)) {
 					page = Integer.parseInt(between.trim());
-					FileUtil.appendUtf8String("\n=================== 获取到最近一次中断的 page [" + page + "]，将会增量爬取 =====================\n", path);
+					String line = "\n=================== 获取到最近一次中断的 page [" + page + "]，将会增量爬取 =====================\n";
+					System.out.println(line);
+					FileUtil.appendUtf8String(line, path);
 					break;
 				}
 			}
 			
 			if (i == 0) {
-				FileUtil.appendUtf8String("\n======================== 未检测到 page 记录，将会从头开始爬取 =======================\n", path);
+				String line = "\n======================== 未检测到 page 记录，将会从头开始爬取 =======================\n";
+				System.out.println(line);
+				FileUtil.appendUtf8String(line, path);
 			}
 		}
 		
