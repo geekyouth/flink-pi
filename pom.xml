@@ -12,6 +12,28 @@
 		树莓派不吃灰，跑个flink 实时分析任务不香吗？
 		已完成数据源实时更新。
 	</description>
+	<url>https://github.com/geekyouth/flink-pi</url>
+	
+	<developers>
+		<developer>
+			<name>geekyouth</name>
+			<email>forsupergeeker@gmail.com</email>
+			<url>https://java666.cn</url>
+			<roles>
+				<role>Independent developer</role>
+			</roles>
+		</developer>
+	</developers>
+	
+	<licenses>
+		<license>
+			<name>
+				GNU GENERAL PUBLIC LICENSE
+				Version 3, 29 June 2007
+			</name>
+			<comments>提倡二次修改继续开源</comments>
+		</license>
+	</licenses>
 	
 	<properties>
 		<!--基础部分配置-->
@@ -94,7 +116,7 @@
 							<transformers>
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<!-- 主类 -->
-									<mainClass>cn.java.FlinkPi.source.KugeciHttp</mainClass>
+									<mainClass>cn.java666.FlinkPi.source.KugeciHttp</mainClass>
 								</transformer>
 								<transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
 									<resource>reference.conf</resource>
@@ -116,7 +138,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+		
 		</plugins>
 	</build>
 </project>
