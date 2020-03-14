@@ -80,3 +80,7 @@ pom.xml 核心配置：
 2020-03-08：
 - 修正部分错误，完善文档
 - 抽样部分爬取数据
+
+- 截至目前，已爬取 8万首歌词入库到 elasticsearch，下一步还在规划继续开发的方向。
+![image](https://user-images.githubusercontent.com/12899262/76682704-3f562280-6639-11ea-912a-d77a44397a35.png)
+![image](https://user-images.githubusercontent.com/12899262/76682767-bee3f180-6639-11ea-9764-e8c6ff7f3d8f.png)
