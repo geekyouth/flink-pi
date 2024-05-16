@@ -70,7 +70,7 @@
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
-			<version>5.0.3</version>
+			<version>5.8.21</version>
 		</dependency>
 		
 		<!-- 牛逼分词 -->
